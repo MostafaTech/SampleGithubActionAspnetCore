@@ -21,12 +21,14 @@ jobs:
     - name: Build
       run: dotnet build --configuration Release --no-restore
     - name: Publish
-      run: dotnet publish -c Release -o /tmp/publish --self-contained false --no-restore --verbosity normal
+      run: |
+        chmod +x ./build.sh
+        ./build.sh
     - name: Create publish artifact
       uses: actions/upload-artifact@v2
       with:
-        name: asp-publish
-        path: /tmp/publish/
+        name: publish-api
+        path: /tmp/publish/api.zip
 #    - name: Create Release
 #      id: create_release
 #      uses: actions/create-release@v1
