@@ -1,4 +1,9 @@
-﻿using System;
+﻿/*
+ * Developed by Mostafa Rowghanian
+ * Version 0.2
+ */
+
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
