@@ -21,7 +21,7 @@ jobs:
     - name: Build
       run: dotnet build --configuration Release --no-restore
     - name: Publish
-      run: dotnet publish -c Release -o /tmp/publish --self-contained false --no-restore --verbosity
+      run: dotnet publish -c Release -o /tmp/publish --self-contained false --no-restore --verbosity normal
     - name: Create publish artifact
       uses: actions/upload-artifact@v2
       with:
